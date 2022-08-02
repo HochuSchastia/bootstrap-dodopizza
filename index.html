@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- header start -->
+    <nav class="navbar bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="data:image/png;base64,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"
+            alt=""
+            width="200"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+        <div>
+          <h6>Доставка пиццы Бишкек</h6>
+          <h6>38 мин</h6>
+        </div>
+        <div>
+          <h6>0 (551) 550-550</h6>
+          <h6 class="text-secondary">Звонок по телефону</h6>
+        </div>
+        <div>Додокоины</div>
+        <button
+          type="button"
+          class="btn btn-light rounded-pill"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          Войти
+        </button>
+      </div>
+    </nav>
+
+    <!-- header end -->
+    <!-- navbar sart -->
+    <ul class="nav container">
+      <li class="nav-item">
+        <a
+          class="nav-link active text-dark fw-bold"
+          aria-current="page"
+          href="#"
+          >Пицца</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-dark fw-bold" href="#">Комбо</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-dark fw-bold" href="#">Закуски</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-dark fw-bold">Десерты</a>
+      </li>
+    </ul>
+    <!-- navbar end -->
+    <!-- carousel start -->
+    <div class="container d-flex">
+      <div
+        class="card border border-4 border-warning p-1 m-1"
+        style="width: 18rem"
+      >
+        <img
+          src="https://media-cdn.tripadvisor.com/media/photo-p/18/0d/0d/7b/dodo-pizza.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+      </div>
+      <div
+        class="card border border-4 border-warning p-1 m-1"
+        style="width: 18rem"
+      >
+        <img
+          src="https://s7d1.scene7.com/is/image/mcdonalds/h-mcdonalds-Big-Mac-Extra-Value-Meals:1-3-product-tile-desktop?wid=830&hei=516&dpr=off"
+          class="card-img-top"
+          alt="..."
+        />
+      </div>
+      <div
+        class="card border border-4 border-warning p-1 m-1"
+        style="width: 18rem"
+      >
+        <img
+          src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/healthy-christmas-snacks-for-kids-1639149982.jpg"
+          class="card-img-top"
+          alt="..."
+          height="250"
+        />
+      </div>
+      <div
+        class="card border border-4 border-warning p-1 m-1"
+        style="width: 18rem"
+      >
+        <img
+          src="https://www.africanbites.com/wp-content/uploads/2021/09/35-Fun-and-Easy-Fruit-Desserts-1-1.png"
+          class="card-img-top"
+          alt="..."
+        />
+      </div>
+    </div>
+    <!-- carousel end -->
+
+    <!-- mini cards start -->
+    <div class="container">
+      <h5>Часто заказывают</h5>
+      <div class="d-flex justify-content-between">
+        <div
+          class="shadow p-3 mb-5 bg-body rounded d-flex align-items-center col-3"
+        >
+          <img
+            src="https://st.depositphotos.com/1003814/5052/i/950/depositphotos_50523105-stock-photo-pizza-with-tomatoes.jpg"
+            alt=""
+            width="100"
+          />
+          <div>
+            <h6>Пепперони</h6>
+            <h6>от 399 сом</h6>
+          </div>
+        </div>
+        <div
+          class="shadow p-3 mb-5 bg-body rounded d-flex align-items-center col-3"
+        >
+          <img
+            src="https://st.depositphotos.com/1003814/5052/i/950/depositphotos_50523105-stock-photo-pizza-with-tomatoes.jpg"
+            alt=""
+            width="100"
+          />
+          <div>
+            <h6>Пепперони</h6>
+            <h6>от 399 сом</h6>
+          </div>
+        </div>
+        <div
+          class="shadow p-3 mb-5 bg-body rounded d-flex align-items-center col-3"
+        >
+          <img
+            src="https://st.depositphotos.com/1003814/5052/i/950/depositphotos_50523105-stock-photo-pizza-with-tomatoes.jpg"
+            alt=""
+            width="100"
+          />
+          <div>
+            <h6>Пепперони</h6>
+            <h6>от 399 сом</h6>
+          </div>
+        </div>
+        <div
+          class="shadow p-3 mb-5 bg-body rounded d-flex align-items-center col-3"
+        >
+          <img
+            src="https://st.depositphotos.com/1003814/5052/i/950/depositphotos_50523105-stock-photo-pizza-with-tomatoes.jpg"
+            alt=""
+            width="100"
+          />
+          <div>
+            <h6>Пепперони</h6>
+            <h6>от 399 сом</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- mini cards end -->
+
+    <!-- basket start -->
+    <div class="d-flex justify-content-center">
+      <div
+        class="shadow p-3 mb-5 bg-body rounded d-flex justify-content-evenly align-items-center col-4"
+      >
+        <img
+          src="https://cdn.dodostatic.net/site-static/dist/f30f1ab8cd7a7a54476d.svg"
+          alt=""
+          width="50"
+        />
+        <div>
+          <h6>Без свинины</h6>
+          <h6 class="text-secondary">Мы готовим из цыпленка и говядины</h6>
+        </div>
+      </div>
+    </div>
+    <div>
+      <!-- pizzas start -->
+      <div class="container">
+        <h4>Пицца</h4>
+        <div class="d-flex justify-content-between">
+          <div class="card" style="width: 18rem">
+            <img
+              src="https://cdn.dodostatic.net/static/Img/Products/c940c5751e6d420e997d86c26a8ba16f_292x292.jpeg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Пицца из половинок</h5>
+              <p class="card-text text-secondary">
+                Соберите свою пиццу 35 см с двумя разными вкусами
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <h5>от 520 сом</h5>
+                <a
+                  href="#"
+                  class="btn rounded-pill text-light"
+                  style="background-color: rgb(255, 105, 0)"
+                  >Собрать</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <img
+              src="https://cdn.dodostatic.net/static/Img/Products/c940c5751e6d420e997d86c26a8ba16f_292x292.jpeg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Пицца из половинок</h5>
+              <p class="card-text text-secondary">
+                Соберите свою пиццу 35 см с двумя разными вкусами
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <h5>от 520 сом</h5>
+                <a
+                  href="#"
+                  class="btn rounded-pill text-light"
+                  style="background-color: rgb(255, 105, 0)"
+                  >Собрать</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <img
+              src="https://cdn.dodostatic.net/static/Img/Products/c940c5751e6d420e997d86c26a8ba16f_292x292.jpeg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Пицца из половинок</h5>
+              <p class="card-text text-secondary">
+                Соберите свою пиццу 35 см с двумя разными вкусами
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <h5>от 520 сом</h5>
+                <a
+                  href="#"
+                  class="btn rounded-pill text-light"
+                  style="background-color: rgb(255, 105, 0)"
+                  >Собрать</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <img
+              src="https://cdn.dodostatic.net/static/Img/Products/c940c5751e6d420e997d86c26a8ba16f_292x292.jpeg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Пицца из половинок</h5>
+              <p class="card-text text-secondary">
+                Соберите свою пиццу 35 см с двумя разными вкусами
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <h5>от 520 сом</h5>
+                <a
+                  href="#"
+                  class="btn rounded-pill text-light"
+                  style="background-color: rgb(255, 105, 0)"
+                  >Собрать</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- pizzas end -->
+    <!-- info start -->
+    <div class="container mt-5">
+      <h3 class="mb-4">Доставка и оплата</h3>
+      <div class="d-flex justify-content-between">
+        <div class="col-3">
+          <h6 class="text-warning">60 МИНУТ ИЛИ ПИЦЦА БЕСПЛАТНО</h6>
+          <p>
+            Если мы не успеем доставить любые продукты, кроме сувенирной
+            продукции и соусов, в течение 60 минут, курьер подарит вам
+            сертификат на большую пиццу.
+          </p>
+        </div>
+        <div class="col-4">
+          <h6 class="text-warning">365 СОМ</h6>
+          <p>Минимальная сумма доставки</p>
+          <h6 class="text-warning">25 000 СОМ</h6>
+          <p>Максимальная сумма при оплате наличными</p>
+          <p>Изображения продуктов могут отличаться от продуктов в заказе.</p>
+        </div>
+        <div class="col-2">
+          <h6 class="text-warning">ЗОНА ДОСТАВКИ ОГРАНИЧЕНА</h6>
+          <img
+            src="https://cdn.dodostatic.net/site-static/dist/fcd1f4fda959e86e45a7.jpg"
+            alt="map"
+            width="300"
+            height="300"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- info end -->
+    <div style="background-color: rgb(255, 105, 0)">
+      <div
+        class="container d-flex justify-content-between align-items-center py-2"
+      >
+        <h4 class="text-light">
+          Стань тайным покупателем Додо Пиццы и получи пиццу в подарок
+        </h4>
+        <button class="btn btn-outline-warning">Заполнить анкету</button>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">...</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
